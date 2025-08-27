@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Connect - Volunteer Enquiry</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: #2c3e50;
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #3498db;
+        }
+
+        main {
+            margin-top: 80px;
+            padding: 2rem 0;
+        }
+
+        .content {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 0.8rem;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #3498db;
+        }
+
+        .checkbox-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .checkbox-item input[type="checkbox"] {
+            width: auto;
+            margin: 0;
+        }
+
+        .btn {
+            background: #3498db;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background 0.3s;
+            margin-right: 1rem;
+        }
+
+        .btn:hover {
+            background: #2980b9;
+        }
+
+        .btn-secondary {
+            background: #95a5a6;
+        }
+
+        .btn-secondary:hover {
+            background: #7f8c8d;
+        }
+
+        .success-message {
+            background: #d4edda;
+            color: #155724;
+            padding: 1rem;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+            display: none;
+        }
+
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .checkbox-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">Community Connect</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="enquire.html" class="active">Enquire</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="content">
+            <h1>Volunteer Enquiry Form</h1>
+            <p>Thank you for your interest in volunteering with Community Connect! Please fill out the form below and we'll get back to you within 24 hours with information about opportunities that match your interests.</p>
+
+            <div class="success-message" id="successMessage">
+                Thank you for your enquiry! We've received your information and will contact you within 24 hours.
+            </div>
+
+            <form id="volunteerForm">
+                <div class="form-group">
+                    <label for="firstName">First Name *</label>
+                    <input type="text" id="firstName" name="firstName" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="lastName">Last Name *</label>
+                    <input type="text" id="lastName" name="lastName" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+
+                <div class="form-group">
+                    <label for="age">Age Group *</label>
+                    <select id="age" name="age" required>
+                        <option value="">Select your age group</option>
+                        <option value="16-18">16-18</option>
+                        <option value="19-25">19-25</option>
+                        <option value="26-35">26-35</option>
+                        <option value="36-45">36-45</option>
+                        <option value="46-55">46-55</option>
+                        <option value="56-65">56-65</option>
+                        <option value="65+">65+</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="availability">Availability *</label>
+                    <select id="availability" name="availability" required>
+                        <option value="">Select your availability</option>
+                        <option value="weekdays">Weekdays</option>
+                        <option value="weekends">Weekends</option>
+                        <option value="both">Both weekdays and weekends</option>
+                        <option value="flexible">Flexible</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Areas of Interest (Select all that apply)</label>
+                    <div class="checkbox-grid">
+                        <div class="checkbox-item">
+                            <input type="checkbox" name="interests" value="education" id="education">
+                            <label for="education">Education</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" name="interests" value="environment" id="environment">
+                            <label for="environment">Environment</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" name="interests" value="elderly" id="elderly">
+                            <label for="elderly">Elderly Care</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" name="interests" value="youth" id="youth">
+                            <label for="youth">Youth Programs</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" name="interests" value="animals" id="animals">
+                            <label for="animals">Animal Welfare</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" name="interests" value="health" id="health">
+                            <label for="health">Health & Wellness</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" name="interests" value="community" id="community">
+                            <label for="community">Community Events</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" name="interests" value="arts" id="arts">
+                            <label for="arts">Arts & Culture</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="experience">Previous Volunteer Experience</label>
+                    <select id="experience" name="experience">
+                        <option value="">Select your experience level</option>
+                        <option value="none">No previous experience</option>
+                        <option value="some">Some experience</option>
+                        <option value="extensive">Extensive experience</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="skills">Special Skills or Qualifications</label>
+                    <textarea id="skills" name="skills" rows="3" placeholder="Please list any special skills, certifications, or qualifications you have..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="motivation">Why do you want to volunteer with us?</label>
+                    <textarea id="motivation" name="motivation" rows="4" placeholder="Tell us what motivates you to volunteer and what you hope to achieve..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="questions">Additional Questions or Comments</label>
+                    <textarea id="questions" name="questions" rows="3" placeholder="Any questions about our programs or additional information you'd like to share..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" name="newsletter" value="yes" id="newsletter">
+                        <label for="newsletter">I would like to receive newsletters and updates about volunteer opportunities</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" name="terms" value="yes" required id="terms">
+                        <label for="terms">I agree to the terms and conditions and privacy policy *</label>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn">Submit Enquiry</button>
+                <button type="reset" class="btn btn-secondary">Reset Form</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Community Connect. All rights reserved. | Making communities stronger, one volunteer at a time.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Form handling
+        document.getElementById('volunteerForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const data = {};
+            
+            // Process regular form fields
+            for (let [key, value] of formData.entries()) {
+                if (data[key]) {
+                    // Handle multiple values (checkboxes)
+                    if (Array.isArray(data[key])) {
+                        data[key].push(value);
+                    } else {
+                        data[key] = [data[key], value];
+                    }
+                } else {
+                    data[key] = value;
+                }
+            }
+            
+            // Handle checkboxes for interests
+            const interests = [];
+            const interestCheckboxes = document.querySelectorAll('input[name="interests"]:checked');
+            interestCheckboxes.forEach(checkbox => {
+                interests.push(checkbox.value);
+            });
+            data.interests = interests;
+            
+            // Simulate form submission
+            console.log('Form submitted with data:', data);
+            
+            // Show success message
+            document.getElementById('successMessage').style.display = 'block';
+            
+            // Scroll to top of form
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            
+            // Reset form after short delay
+            setTimeout(() => {
+                this.reset();
+                document.getElementById('successMessage').style.display = 'none';
+            }, 3000);
+        });
+
+        // Form reset handler
+        document.getElementById('volunteerForm').addEventListener('reset', function() {
+            document.getElementById('successMessage').style.display = 'none';
+        });
+
+        // Form validation enhancements
+        const requiredFields = document.querySelectorAll('input[required], select[required]');
+        requiredFields.forEach(field => {
+            field.addEventListener('blur', function() {
+                if (!this.value.trim()) {
+                    this.style.borderColor = '#e74c3c';
+                } else {
+                    this.style.borderColor = '#27ae60';
+                }
+            });
+            
+            field.addEventListener('input', function() {
+                if (this.value.trim()) {
+                    this.style.borderColor = '#27ae60';
+                } else {
+                    this.style.borderColor = '#e74c3c';
+                }
+            });
+        });
+
+        // Email validation
+        document.getElementById('email').addEventListener('blur', function() {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (this.value && !emailRegex.test(this.value)) {
+                this.style.borderColor = '#e74c3c';
+            } else if (this.value) {
+                this.style.borderColor = '#27ae60';
+            }
+        });
+    </script>
+</body>
+</ht
