@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <title>SkillBridge Academy - Services</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: #2c3e50;
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #3498db;
+        }
+
+        main {
+            margin-top: 80px;
+            padding: 2rem 0;
+        }
+
+        .content {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .service-card {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .image-placeholder {
+            width: 100%;
+            height: 120px;
+            background: #ddd;
+            border: 2px dashed #999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-style: italic;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+        }
+
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+        }
+
+        h3 {
+            color: #34495e;
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">SkillBridge Academy</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html" class="active">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="enquire.html">Enquire</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="content">
+            <h1>Our Services</h1>
+            <p>We offer a comprehensive range of services to both volunteers and organizations, ensuring meaningful connections and impactful community engagement.</p>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="image-placeholder">
+                        [Service Icon - Volunteer Matching]
+                    </div>
+                    <h3>Volunteer Matching</h3>
+                    <p>Our advanced matching system connects volunteers with opportunities that align with their skills, interests, and availability. We take the guesswork out of finding the perfect volunteer training role.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="image-placeholder">
+                        [Service Icon - Training Programs]
+                    </div>
+                    <h3>Training Programs</h3>
+                    <p>We provide comprehensive training sessions to prepare volunteers for their roles and ensure they feel confident and prepared. From basic orientation to specialized skills training.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="image-placeholder">
+                        [Service Icon - Event Coordination]
+                    </div>
+                    <h3>Event Coordination</h3>
+                    <p>From small community cleanups to large fundraising events, we help organize and coordinate volunteer activities that make a real difference in our community.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="image-placeholder">
+                        [Service Icon - Skill Development]
+                    </div>
+                    <h3>Skill Development</h3>
+                    <p>Our programs help empowering unemployed youth with vocational skills, creating win-win situations that benefit both individuals and organizations.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="image-placeholder">
+                        [Service Icon - Organization Support]
+                    </div>
+                    <h3>Organization Support</h3>
+                    <p>We provide resources and support to help local organizations effectively manage and engage their volunteer teams, maximizing impact and satisfaction.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="image-placeholder">
+                        [Service Icon - Community Events]
+                    </div>
+                    <h3>Community Events</h3>
+                    <p>Regular networking events and appreciation ceremonies help build lasting connections within our volunteer community and celebrate achievements together.</p>
+                </div>
+            </div>
+
+            <section>
+                <h2>Why Choose Our Services?</h2>
+                <p>At SkillBridge Academy , we understand that successful volunteering is about more than just showing up. Our comprehensive approach ensures that every volunteer experience is meaningful, impactful, and rewarding for everyone involved.</p>
+                
+                <p>Whether you're an individual looking to give back or an organization seeking dedicated volunteers, our services are designed to create lasting positive change in our community. <a href="contact.html" style="color: #3498db; text-decoration: none;">Contact us today</a> to learn more about how we can help you make a difference.</p>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 SkillBridge Academy . All rights reserved. | Making communities stronger, one volunteer at a time.</p>
+        </div>
+    </footer>
+</body>
+</html>
