@@ -3,181 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillBridge Academy</title>
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
-    <title>SkillBridge Academy - Home</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f4f4f4;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        header {
-            background: #2c3e50;
-            color: white;
-            padding: 1rem 0;
-            position: sticky;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover,
-        .nav-links a.active {
-            color: #3498db;
-        }
-
-        main {
-            margin-top: 80px;
-            padding: 2rem 0;
-        }
-
-        .content {
-            background: white;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            margin-bottom: 2rem;
-        }
-
-        .hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 4rem 2rem;
-            text-align: center;
-            border-radius: 8px;
-            margin-bottom: 2rem;
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .image-placeholder {
-            width: 100%;
-            height: 200px;
-            background: #ddd;
-            border: 2px dashed #999;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #666;
-            font-style: italic;
-            margin: 1rem 0;
-            border-radius: 8px;
-        }
-
-        footer {
-            background: #2c3e50;
-            color: white;
-            text-align: center;
-            padding: 2rem 0;
-            margin-top: 3rem;
-        }
-
-        @media (max-width: 768px) {
-            .nav-links {
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            .hero h1 {
-                font-size: 2rem;
-            }
-        }
-    </style>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/styles/styles.css">
 </head>
 <body>
-    <header>
-        <nav class="container">
-            <div class="logo">SkillBridge Academy</div>
-            <ul class="nav-links">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="enquire.html">Enquire</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main class="container">
-        <div class="hero">
-            <h1>Welcome to Empowering Urban youth through digital skills</h1>
-            <p>Non-profit organisation dedicated to providing free online vocational training to unemployed youth in urban areas.</p>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/images/logo.png" alt="Skill Nation Logo" class="logo-icon">
+                SkillBridge Academy
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="courses.html">Courses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        
-        <div class="content">
-            <div class="image-placeholder">
-                [Hero Image Placeholder - Skilled  Community volunteers working together]
+    </nav>
+
+    <!-- Main Content -->
+    <main class="py-5">
+        <div class="container">
+            <div class="hero">
+                <h1 class="display-3 fw-bold">SkillBridge Academy</h1>
+                <p class="lead">Transform your future with our comprehensive online courses. Learn new skills, advance your career, and unlock your potential with SkillBridge Academy - where knowledge meets opportunity.</p>
+                <a href="courses.html" class="btn btn-custom btn-lg">Explore Courses</a>
             </div>
 
-            <section>
-                <h2>Making a Difference Together</h2>
-                <p>At CEmpowering Urban youth through digital Skills, we believe in the power of collective action. Our platform brings together passionate individuals who want to contribute to their community and organizations that need dedicated skilled volunteers.</p>
-                
-                <div class="image-placeholder">
-                    [Feature Image Placeholder - Diverse group of volunteers]
+            <!-- Features -->
+            <div class="row g-4 my-5">
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="bi bi-mortarboard"></i>
+                        </div>
+                        <h3>Expert Instructors</h3>
+                        <p>Learn from industry professionals and experienced educators who bring real-world knowledge to every lesson.</p>
+                    </div>
                 </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="bi bi-lightning"></i>
+                        </div>
+                        <h3>Flexible Learning</h3>
+                        <p>Study at your own pace with 24/7 access to course materials, perfect for busy schedules and lifestyles.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="bi bi-trophy"></i>
+                        </div>
+                        <h3>Certified Skills</h3>
+                        <p>Earn recognized certificates upon completion and boost your professional credentials in the job market.</p>
+                    </div>
+                </div>
+            </div>
 
-                <p>Whether you're looking to gain new skills, meet like-minded people, or simply give back to your community, by Empowering Urban youth through digital Skills . From environmental conservation to education support, there's a place for everyone to contribute.</p>
-                
-                <p>Ready to get started? <a href="enquire.html" style="color: #3498db; text-decoration: none;">Fill out our volunteer enquiry form</a> and we'll match you with the perfect opportunity!</p>
-            </section>
+            <!-- Stats -->
+            <div class="stats">
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="stat">
+                            <div class="stat-number">10,000+</div>
+                            <div class="stat-label">Students Enrolled</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="stat">
+                            <div class="stat-number">250+</div>
+                            <div class="stat-label">Courses Available</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="stat">
+                            <div class="stat-number">95%</div>
+                            <div class="stat-label">Success Rate</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="stat">
+                            <div class="stat-number">50+</div>
+                            <div class="stat-label">Expert Instructors</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
 
+    <!-- Footer -->
     <footer>
         <div class="container">
             <p>&copy; 2023 SkillBridge Academy . All rights reserved. | Making communities stronger, one volunteer at a time.</p>
         </div>
     </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/scripts/script.js"></script>
 </body>
 </html>
