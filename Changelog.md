@@ -18,3 +18,5 @@ https://skillnation.ai/#workshops
 https://www.learnworlds.com/
 
 https://edu.gcfglobal.org/en/
+
+https://www.coursera.org/courses?query=free&skills=Web%20Development
